@@ -59,7 +59,7 @@ export const getSingleBlogs = async (req,res)=>{
 }
 export const getMyBlogs = async(req,res)=>{
     const createdBy = req.user_id;
-    const myBlogs = await blog.find({createdBy});
+    const myBlogs = await Blog.find({createdBy});
     res.status(200).json(myBlogs);
 
 };

@@ -8,6 +8,8 @@ import {
     updateBlog
 } from "../controller/blog.controller"
 
+import {isAdmin,isAuthenticated} from "../middleware/authUser.js"
+
 const router = express.Router();
 router.post("/create",isAuthenticated,isAdmin("admin"),createBlog);
 router.delete("delete/:id",isAuthenticated,isAdmin("admin"),deleteBlog);

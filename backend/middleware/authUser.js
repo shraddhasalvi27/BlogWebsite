@@ -33,3 +33,5 @@ const isAdmin = (...roles)=>{
         next();
     };
 };
+
+export default {isAdmin,isAuthenticated};
