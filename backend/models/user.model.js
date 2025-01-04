@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
     email:{
         type:String,
         required:true,
-        validate:[validator.isEmail(),"please enter a valid email"]
+        validate:[validator.isEmail,"please enter a valid email"]
 
     },
     phone:{

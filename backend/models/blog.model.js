@@ -1,5 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-import { User } from "./user.model";
+// import { User } from "./user.model";
 
 const blogSchema = new mongoose.Schema({
     title:{
@@ -29,7 +29,7 @@ const blogSchema = new mongoose.Schema({
     },
     adminname:{
         type:String,
-        required:true,
+        // required:true,
 
     },
     adminPhoto:{

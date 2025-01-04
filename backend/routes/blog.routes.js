@@ -6,7 +6,7 @@ import {
     getSingleBlogs,
     getMyBlogs,
     updateBlog
-} from "../controller/blog.controller"
+} from "../controller/blog.controller.js"
 
 import {isAdmin,isAuthenticated} from "../middleware/authUser.js"
 
@@ -19,3 +19,4 @@ router.get("/my-blog",isAuthenticated,isAdmin("admin"),getMyBlogs);
 router.put("/update/:id",isAuthenticated,isAdmin("admin"),updateBlog);
 
 export default router;
+

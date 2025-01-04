@@ -1,8 +1,8 @@
-import User from "../models/user.model.js";
+import {User} from "../models/user.model.js";
 import jwt from "jsonwebtoken";
 
 //Authentication
-const isAuthenticated = async(req,res,next)=>{
+export const isAuthenticated = async(req,res,next)=>{
     try{
         const token = req.cookies.jwt;
         console.log("middleware:",token);
@@ -11,7 +11,7 @@ const isAuthenticated = async(req,res,next)=>{
 
         }
         const decoded = jwt.verify(token,process.env.JWT_SECRET_KEY);
-        const user = await user.findById(decoded.userId);
+        const user = await User.findById(decoded.userId);
         if(!user){
             return res.status(404).json({error:"User not found"});
         }
@@ -20,12 +20,12 @@ const isAuthenticated = async(req,res,next)=>{
 
     }catch(error){
         console.log("error occuring in Authentication:" +error);
-        return res.satatus(401).json({error:"User not authenticated"});
+        return res.status(401).json({error:"User not authenticated"});
 
     }
 }
 
-const isAdmin = (...roles)=>{
+export const isAdmin = (...roles)=>{
     return (req,res,next)=>{
         if(!roles.includes(req.user.role)){
             return res.status(403).json({error:`User with given role ${req.user.role} not allowed`})
@@ -34,4 +34,3 @@ const isAdmin = (...roles)=>{
     };
 };
 
-export default {isAdmin,isAuthenticated};
