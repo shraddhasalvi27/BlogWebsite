@@ -10,11 +10,14 @@ import Creators from "./pages/Creators.jsx"
 import Dashboard from "./pages/Dashboard.jsx"
 import Login from "./pages/Login.jsx"
 import Register from "./pages/Register.jsx"
+import { useAuth } from "./context/AuthProvider.jsx";
 const App =()=>{
   const location = useLocation();
   const hideNavFoot = ["/dashboard","/login","/register"].includes(
     location.pathname
   )
+  const {blogs} = useAuth();
+  console.log(blogs);
   return(
     <div>
       {!hideNavFoot && <Navbar/>}
@@ -22,7 +25,7 @@ const App =()=>{
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/about" element={<About/>}/>
           <Route exact path="/blogs" element={<Blogs/>}/>
-          <Route exact path="/constact" element={<Contact/>}/>
+          <Route exact path="/contact" element={<Contact/>}/>
           <Route exact path="/creators" element={<Creators/>}/>
           <Route exact path="/dashboard" element={<Dashboard/>}/>
           <Route exact path="/login" element={<Login/>}/>
