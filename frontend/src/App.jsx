@@ -22,7 +22,7 @@ const App =()=>{
     <div>
       {!hideNavFoot && <Navbar/>}
       <Routes>
-          <Route exact path="/" element={<Home/>}/>
+          {/* <Route exact path="/" element={<Home/>}/> */}
           <Route exact path="/about" element={<About/>}/>
           <Route exact path="/blogs" element={<Blogs/>}/>
           <Route exact path="/contact" element={<Contact/>}/>
@@ -31,7 +31,7 @@ const App =()=>{
           <Route exact path="/login" element={<Login/>}/>
           <Route exact path="/register" element={<Register/>}/>
       </Routes>
-      {!hideNavFoot && <Footer/>}
+      {/* {!hideNavFoot && <Footer/>} */}
 
     </div>
    
