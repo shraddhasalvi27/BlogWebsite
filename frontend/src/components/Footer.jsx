@@ -54,38 +54,38 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a href="#" className="text-gray-400 hover:text-white">
-                  DhiWise vs Anima
+                  KnowShare vs Anima
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white">
-                  DhiWise vs Appsmith
+                  KnowShare vs Appsmith
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white">
-                  DhiWise vs FlutterFlow
+                  KnowShare vs FlutterFlow
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white">
-                  DhiWise vs Monday Hero
+                  KnowShare vs Monday Hero
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white">
-                  DhiWise vs Retool
+                  KnowShare vs Retool
                 </a>
               </li>
 
               <li>
                 <a href="#" className="text-gray-400 hover:text-white">
-                  DhiWise vs Bubble
+                  KnowShare vs Bubble
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white">
-                  DhiWise vs Figma Dev Mode
+                  KNowShare vs Figma Dev Mode
                 </a>
               </li>
             </ul>
@@ -124,10 +124,10 @@ const Footer = () => {
       </footer>
       <div className=" container mx-auto  flex flex-col md:flex-row justify-between items-center">
         <div className="text-xl font-semibold hidden md:flex">
-          Cilli<span className="text-blue-500 font-bold">Blog</span>
+          Know<span className="text-blue-500 font-bold">Share</span>
         </div>
         <div className="text-gray-400 text-sm hidden md:flex">
-          <p>&copy; 2024 DhiWise PVT. LTD. All rights reserved</p>
+          <p>&copy; 2024 KnowShare PVT. LTD. All rights reserved</p>
         </div>
         <div className="mt-4 md:mt-0 flex space-x-4">
           <a href="#">

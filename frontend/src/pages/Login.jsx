@@ -56,7 +56,7 @@ function Login() {
         <div className="w-full max-w-md bg-white shadow-md rounded-lg p-8">
           <form onSubmit={handleLogin}>
             <div className="font-semibold text-xl items-center text-center">
-              Cilli<span className="text-blue-500">Blog</span>
+              Know<span className="text-blue-500">Share</span>
             </div>
             <h1 className="text-xl font-semibold mb-6">Login</h1>
             <select
