@@ -36,10 +36,16 @@ function Navbar() {
     <>
       <nav className=" shadow-lg px-4 py-2">
         <div className="flex items-center justify-between container mx-auto">
-          <div className="font-semibold text-xl">
-            Cilli<span className="text-blue-500">Blog</span>
+          <div className="flex items-center space-x-3">
+            <img
+              src="/logo.png"
+              alt="Logo"
+              className="h-10 w-10 object-contain"
+            />
+            <h1 className="text-2xl font-bold">
+              Know<span className="text-blue-500">Share</span>
+            </h1>
           </div>
-          {/* Desktop */}
           <div className=" mx-6">
             <ul className="hidden md:flex space-x-6">
               <Link to="/" className="hover:text-blue-500">
