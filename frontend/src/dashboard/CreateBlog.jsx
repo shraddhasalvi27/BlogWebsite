@@ -55,7 +55,7 @@ function CreateBlog() {
   return (
     <div>
       <div className="min-h-screen  py-10">
-        <div className="max-w-4xl mx-auto p-6 border  rounded-lg shadow-lg">
+        <div className="max-w-4xl mx-auto p-6 border  rounded-lg shadow-lg ml-80">
           <h3 className="text-2xl font-semibold mb-8">Create Blog</h3>
           <form onSubmit={handleCreateBlog} className="space-y-6">
             <div className="space-y-2">
