@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { BACKEND_URL } from "../utils"
+import { BACKEND_URL } from "../utils";
 
 export const AuthContext = createContext();
 
