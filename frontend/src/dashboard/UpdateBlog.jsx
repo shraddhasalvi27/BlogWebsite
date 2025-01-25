@@ -39,7 +39,7 @@ function UpdateBlog() {
             },
           }
         );
-        console.log(data);
+        
         setTitle(data?.title);
         setCategory(data?.category);
         setAbout(data?.about);
@@ -71,7 +71,7 @@ function UpdateBlog() {
           },
         }
       );
-      console.log(data);
+      
       toast.success(data.message || "Blog updated successfully");
       navigateTo("/");
     } catch (error) {

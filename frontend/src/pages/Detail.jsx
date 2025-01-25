@@ -7,7 +7,7 @@ import { BACKEND_URL } from "../utils";
 function Detail() {
   const { id } = useParams();
   const [blogs, setblogs] = useState({});
-  console.log(blogs);
+  
   useEffect(() => {
     const fetchblogs = async () => {
       try {
@@ -21,7 +21,7 @@ function Detail() {
             },
           }
         );
-        console.log(data);
+        
         setblogs(data);
       } catch (error) {
         console.log(error);

@@ -13,7 +13,7 @@ function MyBlogs() {
           `${BACKEND_URL}/api/blogs/my-blog`,
           { withCredentials: true }
         );
-        console.log(data);
+        
         setMyBlogs(data);
       } catch (error) {
         console.log(error);

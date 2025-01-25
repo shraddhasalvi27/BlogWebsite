@@ -14,16 +14,13 @@ import { useAuth } from "./context/AuthProvider";
 import { Toaster } from "react-hot-toast";
 import UpdateBlog from "./dashboard/UpdateBlog";
 import Detail from "./pages/Detail";
-// import NotFound from "./pages/NotFound";
 function App() {
   const location = useLocation();
   const hideNavbarFooter = ["/dashboard", "/login", "/register"].includes(
     location.pathname
   );
   const { blogs, isAuthenticated } = useAuth();
-  let token = localStorage.getItem("jwt"); // Retrieve the token directly from the localStorage to maininting the routes protect (Go to login.jsx)
-  console.log(blogs);
-  console.log(isAuthenticated); // it is not using because every page refresh it was redirected to /login
+  let token = localStorage.getItem("jwt");
 
   return (
     <div>
@@ -42,14 +39,9 @@ function App() {
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/dashboard" element={<Dashboard />} />
 
-        {/* Single page route */}
         <Route exact path="/blog/:id" element={<Detail />} />
 
-        {/* Update page route */}
         <Route exact path="/blog/update/:id" element={<UpdateBlog />} />
-
-        {/* Universal route */}
-        {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
       <Toaster />
       {!hideNavbarFooter && <Footer />}

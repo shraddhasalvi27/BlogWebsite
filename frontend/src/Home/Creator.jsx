@@ -4,7 +4,7 @@ import { BACKEND_URL } from "../utils"
 
 function Creator() {
   const [admin, setAdmin] = useState([]);
-  console.log(admin);
+  
   useEffect(() => {
     const fetchAdmins = async () => {
       const { data } = await axios.get(
@@ -13,7 +13,7 @@ function Creator() {
           withCredentials: true,
         }
       );
-      console.log(data.admins);
+      
       setAdmin(data.admins);
     };
     fetchAdmins();

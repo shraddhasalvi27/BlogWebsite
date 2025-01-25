@@ -35,7 +35,6 @@ app.use(
 // DB Code
 try {
   mongoose.connect(MONOGO_URL);
-  console.log("Conntected to MonogDB");
 } catch (error) {
   console.log(error);
 }
@@ -50,7 +49,7 @@ cloudinary.config({
   api_secret: process.env.CLOUD_SECRET_KEY,
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-  console.log(`Server is running on http://localhost:${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`Server is running on port ${port}`);
+//   console.log(`Server is running on http://localhost:${port}`);
+// });

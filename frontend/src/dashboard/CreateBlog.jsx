@@ -41,7 +41,6 @@ function CreateBlog() {
           },
         }
       );
-      console.log(data);
       toast.success(data.message || "User registered successfully");
       setTitle("");
       setCategory("");

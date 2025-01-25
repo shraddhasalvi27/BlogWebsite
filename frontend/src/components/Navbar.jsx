@@ -11,7 +11,6 @@ function Navbar() {
   const [show, setShow] = useState(false);
 
   const { profile, isAuthenticated, setIsAuthenticated } = useAuth();
-  console.log(profile?.user);
   const navigateTo = useNavigate();
 
   const handleLogout = async (e) => {
@@ -21,7 +20,6 @@ function Navbar() {
         `${BACKEND_URL}/api/users/logout`,
         { withCredentials: true }
       );
-      console.log(data);
       localStorage.removeItem("jwt"); // deleting token in localStorage so that if user logged out it will goes to login page
       toast.success(data.message);
       setIsAuthenticated(false);

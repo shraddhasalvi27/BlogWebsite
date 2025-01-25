@@ -85,7 +85,6 @@ export const login = async (req, res) => {
         return res.status(400).json({ message: "Please fill required fields" });
       }
       const user = await User.findOne({ email }).select("+password");
-      console.log(user);
       if (!user.password) {
         return res.status(400).json({ message: "User password is missing" });
       }
@@ -98,7 +97,6 @@ export const login = async (req, res) => {
         return res.status(400).json({ message: `Given role ${role} not found` });
       }
       let token = await createTokenAndSaveCookies(user._id, res);
-      console.log("Login: ", token);
       res.status(200).json({
         message: "User logged in successfully",
         user: {
